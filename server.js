@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 // Require `cors` to allow cross-origin resource sharing
 const cors = require("cors");
-
+app.use(cors());
 
 /* Routes and Page Rendering */
 // GET Route for weather data. Connected to `updateResults()` on client side.
