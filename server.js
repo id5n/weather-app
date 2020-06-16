@@ -1,4 +1,4 @@
-const { masterKey } = require("./config");
+const { masterKey, port } = require("./config");
 
 // Setup empty JS object to act as endpoint for all routes
 projectData = { 
@@ -72,8 +72,7 @@ function addWeather(request, response) {
 app.use(express.static("app"));
 
 // Setup Port and Server
-const port = 3000;
-const server = app.listen(port, listening);
+const server = app.listen(process.env.PORT || port, listening);
 
 // Callback function for port and server
 function listening() {
