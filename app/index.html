@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>id5n's Weather Journal</title>
+    <link rel="icon" type="image/ico" href="assets/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/styles/build/styles.css">
   </head>
 
   <body>
     <main id="app">
-      <h1 class="holder headline">Weather Journal App by id5n</h1>
+      <!-- Introduction Section -->
+      <section class="holder intro">
+        <h1 class="headline" id="top">Weather Journal App by id5n</h1>
+        <img id="hero" src="assets/images/weather-hero-banner.jpg" alt="Hero banner image of multiple weather patterns">
+        <h2 class="subcopy">Curious about the weather for a specific city in the US? Use the fields below to find
+          out!</h2>
+      </section>
       
       <!-- Zip Code Section -->
       <section class="holder zip">
@@ -22,7 +29,7 @@
       <section class="holder feel">
         <label for="feelings">How are you feeling today?</label>
         <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
-        <button id="generate" type="submit"> Generate </button>
+        <button id="generate" type="submit">Generate</button>
       </section>
 
       <!-- Most Recent Entry Section -->
@@ -36,6 +43,11 @@
           <p id="content"></p>
         </div>
       </section>
+
+      <!-- Footer Section to take back to top -->
+      <footer class="holder">
+        <a href="#top"><button id="return">Back to Top</button></a>
+      </footer>
     </main>
 
     <script src="js/app.js" type="text/javascript"></script>
