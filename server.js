@@ -1,5 +1,6 @@
 const { apiUrl, apiKey, apiCountry, port } = require("./config");
 
+
 // Setup empty JS object to act as endpoint for all routes
 const weatherData = { 
   // Use an array to store each API call
