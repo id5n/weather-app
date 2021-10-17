@@ -6,13 +6,13 @@ This project was based on the Weather API exercise presented by the Udacity Fron
 
 <h4>Files:</h4>
 <ul>
-    <li>This will require modifying the `server.js` file and the `app/app.js` file.</li>
-    <li>You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.</li>
+    <li>This will require modifying the <code>server.js</code> file and the <code>app/app.js</code> file.</li>
+    <li>You can see <code>index.html</code> for element references, and once you are finished with the project steps, you can use <code>style.css</code> to style your application to customized perfection.</li>
 </ul>
 
 <h4>Required Dependencies:</h4>
 <ul>
-    <li>This project utilizes `cors` and `body-parser` so you should make sure they are installed through the command line. 
+    <li>This project utilizes <code>cors</code> and <code>body-parser</code> so you should make sure they are installed through the command line. 
     <li>Also, the Node server uses Express, so make sure this is set up as well.</li>
 </ul>
 
