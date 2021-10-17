@@ -1,0 +1,110 @@
+/* Global Variables for Style, Font, and Screen Size */
+$border-radius: 5px;
+$app-font: 'Oswald', sans-serif;
+$app-text: #f3c623;
+$tablet-mobile: 800px;
+$small-mobile: 350px;
+
+
+/* Mixins */
+// Media Query Styles Mixin for Tablet and Mobile (not small)
+@mixin tablet-mobile() { 
+    @media (max-width: $tablet-mobile) {
+        @content;
+    }
+}
+// Media Query Styles Mixin for Mobile (small-only)
+@mixin mobile-small() { 
+    @media (max-width: $small-mobile) {
+            @content;
+        }
+}
+
+
+/* Specific App Styles */
+#app {
+    // General Section Layout
+    display: grid;
+    grid-auto-rows: minmax(80px, auto);
+    grid-gap: 0.5em;
+    justify-content: center;
+    background: #127681;
+    border-radius: 10px;
+    color: $app-text;
+    font-family: $app-font;
+    font-size: 1.4em;
+    margin: 30px auto;
+    padding: 30px 0 30px;
+    // Adjust general font size for tablet and mobile (not small)
+    @include tablet-mobile() {
+        font-size: 1em;
+    }
+    // General Section Layout
+    .holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: $border-radius;
+        margin: 1em;
+    }
+    // Headline Copy
+    .headline {
+        font-size: 2em;
+        text-align: center;
+        text-decoration: underline;
+        // Adjust app title font size for tablet and mobile (not small)
+        @include tablet-mobile() {
+            font-size: 1.3em;
+            padding: 0;
+        }
+    }
+    #hero {
+        border-radius: 5px;
+        @include tablet-mobile() {
+            width: 90%;
+        }
+    }
+    // Description subcopy
+    .subcopy {
+        font-size: 1em;
+        margin: 0 auto;
+        text-align: center;
+        // Adjust subcopy padding for mobile (small)
+        @include mobile-small() {
+            padding: 0 20px;
+        }
+    }
+    // Entry Results Layout
+    .entry {
+        // Entry Results Layout (General)
+        display: block;
+        background: #84a9ac;
+        margin: auto;
+        width: 70%;
+        // Adjust width for entry results in tablet and mobile (not small)
+        @include tablet-mobile() {
+            width: 80%;
+        }
+        .title {
+            text-align: center;
+        }
+        // Entry Results Layout (Data Results)
+        #entryHolder {
+            margin: 20px;
+            padding: 0 2px;
+            vertical-align: middle;
+            // Adjust font size for entry results
+            @include mobile-small() {
+                font-size: 0.8em;
+            }
+        }
+        // Dynamically generated classes for content and icon associated with`#weather` ID
+        .weatherStatus {
+            position: relative;
+            bottom: 14px;
+        }
+        .icon {
+            display: inline;
+        }
+    }
+}

@@ -1,0 +1,200 @@
+/* Global Variables for Style, Font, and Screen Size */
+/* Mixins */
+/* Specific App Styles */
+#app {
+  display: grid;
+  grid-auto-rows: minmax(80px, auto);
+  grid-gap: 0.5em;
+  justify-content: center;
+  background: #127681;
+  border-radius: 10px;
+  color: #f3c623;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4em;
+  margin: 30px auto;
+  padding: 30px 0 30px;
+}
+@media (max-width: 800px) {
+  #app {
+    font-size: 1em;
+  }
+}
+#app .holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  margin: 1em;
+}
+#app .headline {
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+}
+@media (max-width: 800px) {
+  #app .headline {
+    font-size: 1.3em;
+    padding: 0;
+  }
+}
+#app #hero {
+  border-radius: 5px;
+}
+@media (max-width: 800px) {
+  #app #hero {
+    width: 90%;
+  }
+}
+#app .subcopy {
+  font-size: 1em;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 350px) {
+  #app .subcopy {
+    padding: 0 20px;
+  }
+}
+#app .entry {
+  display: block;
+  background: #84a9ac;
+  margin: auto;
+  width: 70%;
+}
+@media (max-width: 800px) {
+  #app .entry {
+    width: 80%;
+  }
+}
+#app .entry .title {
+  text-align: center;
+}
+#app .entry #entryHolder {
+  margin: 20px;
+  padding: 0 2px;
+  vertical-align: middle;
+}
+@media (max-width: 350px) {
+  #app .entry #entryHolder {
+    font-size: 0.8em;
+  }
+}
+#app .entry .weatherStatus {
+  position: relative;
+  bottom: 14px;
+}
+#app .entry .icon {
+  display: inline;
+}
+
+/* Import App styles to combine with general */
+/* Global Variables for Style and Font */
+/* Import global variable from "app" to use globally */
+/* Import global variable from "app" to use globally */
+/* Import global variable from "app" to use globally */
+/* Import global variable from "app" to use globally */
+/* Import global variable from "app" to use globally */
+/* Mixins */
+/* Define Scroll Behavior for App */
+html {
+  scroll-behavior: smooth;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+body {
+  background: #f4f6ff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+  /* General Styles for <textarea> form fields */
+  /* General Styles for Buttons */
+  /* General Styles for Placeholder Text */
+}
+body h1 {
+  font-size: 36px;
+}
+body label {
+  display: block;
+  font-size: 1.2em;
+}
+@media (max-width: 800px) {
+  body label {
+    font-size: 1em;
+  }
+}
+body input {
+  display: block;
+  background: #10375c;
+  color: #f4f6ff;
+  font-size: 1em;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  border-radius: 5px;
+  height: 60px;
+  width: 320px;
+}
+body input:focus {
+  outline: none;
+}
+@media (max-width: 800px) {
+  body input {
+    width: 90%;
+  }
+}
+body textarea {
+  background: #10375c;
+  border-radius: 5px;
+  color: #f4f6ff;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+body textarea:focus {
+  outline: none;
+}
+@media (max-width: 800px) {
+  body textarea {
+    font-size: 1em;
+    width: 90%;
+  }
+}
+body button {
+  background: #3b4a6b;
+  color: #f3c623;
+  box-shadow: 2px 4px 5px #444;
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  border-radius: 5px;
+  line-height: 1rem;
+  width: 10rem;
+  height: 2.5rem;
+  margin: 30px auto 0;
+  text-align: center;
+}
+body button:hover {
+  color: #f4f6ff;
+  box-shadow: 2px 4px 5px #f4f6ff;
+}
+body button:focus {
+  outline: none;
+}
+body ::placeholder {
+  color: #f3c623;
+  font-family: "Oswald", sans-serif;
+  padding: 0 10px;
+  text-align: center;
+}
+body :-ms-input-placeholder {
+  color: #f3c623;
+  font-family: "Oswald", sans-serif;
+  padding: 0 10px;
+  text-align: center;
+}
+body ::-ms-input-placeholder {
+  color: #f3c623;
+  font-family: "Oswald", sans-serif;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
