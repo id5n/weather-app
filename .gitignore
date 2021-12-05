@@ -1,2 +1,5 @@
 # API Keys
 .env
+
+# VSCode
+.vscode
