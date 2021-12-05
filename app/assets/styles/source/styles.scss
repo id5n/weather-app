@@ -1,0 +1,124 @@
+/* Import App styles to combine with general */
+@use "app" as app-styles;
+
+
+/* Global Variables for Style and Font */
+$border-radius: app-styles.$border-radius; /* Import global variable from "app" to use globally */
+$app-font: app-styles.$app-font; /* Import global variable from "app" to use globally */
+$tablet-mobile: app-styles.$tablet-mobile; /* Import global variable from "app" to use globally */
+$small-mobile: app-styles.$small-mobile; /* Import global variable from "app" to use globally */
+$button-input-placeholder: app-styles.$app-text; /* Import global variable from "app" to use globally */$body-input-emphasis: #f4f6ff;
+$placeholder-padding: 0 10px;
+$body-font: -apple-system, BlinkMacSystemFont, sans-serif;
+
+
+/* Mixins */
+// General Styles Mixin for Placeholder Text
+@mixin placeholder-style() { 
+    color: $button-input-placeholder; 
+    font-family: $app-font;
+    padding: $placeholder-padding;
+    text-align: center;
+}
+
+
+/* Define Scroll Behavior for App */
+html {
+  scroll-behavior: smooth;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+// Main Body Layout
+body {
+    background: $body-input-emphasis;
+    font-family: $body-font;
+    margin: 0 auto;
+    padding: 10px;
+    
+    h1 {
+        font-size: 36px;
+    }
+
+    label {
+        display: block;
+        font-size: 1.2em;
+        // Adjust general font size for labels on tablet and mobile
+        @include app-styles.tablet-mobile() {
+            font-size: 1em;
+        };
+    }
+
+    input {
+        display: block;
+        background:#10375c;
+        color: $body-input-emphasis;
+        font-size: 1em;
+        font-family: $app-font;
+        border: none;
+        border-radius: $border-radius;
+        height: 60px;
+        width: 320px;
+
+        &:focus {
+            outline: none;
+        }
+        // Adjust content input width for tablet and mobile (not small)
+        @include app-styles.tablet-mobile() {
+            width: 90%;
+        };
+    }
+    /* General Styles for <textarea> form fields */
+    textarea {
+        background:#10375c;
+        border-radius: $border-radius;
+        color: $body-input-emphasis;
+        font-size: 20px;
+        font-family: $app-font;
+
+        &:focus {
+            outline: none;
+        }
+        // Adjust font size and content input width for tablet and mobile (not small)
+        @include app-styles.tablet-mobile() {
+            font-size: 1em;
+            width: 90%;
+        };
+    }
+    /* General Styles for Buttons */
+    button {
+        background: #3b4a6b;
+        color: $button-input-placeholder;
+        box-shadow: 2px 4px 5px #444;
+        font-size: 1.5em;
+        font-family: $app-font;
+        border: none;
+        border-radius: $border-radius;
+        line-height: 1rem;
+        width: 10rem;
+        height: 2.5rem;
+        margin: 30px auto 0;
+        text-align: center;
+
+        &:hover {
+            color: $body-input-emphasis;
+            box-shadow: 2px 4px 5px $body-input-emphasis;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+    /* General Styles for Placeholder Text */
+    // Firefox, Chrome, Opera
+    ::placeholder {
+        @include placeholder-style();
+    }
+    // Internet Explorer 10-11
+    :-ms-input-placeholder {
+        @include placeholder-style();
+    }
+    // Microsoft Edge
+    ::-ms-input-placeholder {
+        @include placeholder-style();
+    }
+}
